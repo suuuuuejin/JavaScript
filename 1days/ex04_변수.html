@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. var 재선언 가능, 재할당 가능
+        var age=20;
+        var age=22; // 재선언ok
+        document.write(age);
+        document.write("<br>")
+        var age=30;
+        age=33;  // 재할당ok
+        document.write(age);
+        document.write("<br>")
+        // 2. let 재선언 불가능, 재할당 가능
+        let name="홍길동";
+        name ="길동"; // 재할당만 ok
+        document.write(name);
+        // 3. const상수 재선언 불가능, 재할당 불가능
+        const pi=3.14;
+    </script>
+</body>
+</html>

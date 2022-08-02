@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //월화수목금토 값을 가진 배열 만들기
+        let week=['월','화','수','목','금','토'];
+        //6번째 인덱스 '일'을 추가하기
+        week[1]='일'
+        //콘솔창에 출력
+        console.log(week);
+
+        //1. foodlist배열 생성
+        let foodlist=['고기🥩','떡볶이🍛','김밥🍥','라면🍜']
+        //2. 스파게티 추가
+        foodlist[4]='스파게티🍝'
+        foodlist.push('짜장면🥢')
+        console.log(foodlist)
+        //3. pop:배열에 마지막값을 반환하고 없애는 방법
+        console.log(foodlist.pop())
+        //4.배열에 있는 데이터 슬라이싱 .slice(첫값,끝값-1)
+        console.log(foodlist.slice(1,4));
+        //5. 배열에 있는 데이터를 슬라이싱하고 반환하고 없애기
+        // .splice(시작지점,개수)
+        console.log(foodlist.splice(1,2));
+
+    </script>
+</body>
+</html>

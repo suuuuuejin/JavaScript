@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. java, pyth, web 세과목 점수 입력
+        let java = parseInt(prompt("자바점수 입력>>"))
+        let pyth = parseInt(prompt("파이썬점수 입력>>"))
+        let web = parseInt(prompt("웹점수 입력>>"))
+        //2-1. 입력받은 점수의 총점 평균점수를 등급 설정
+        let totalScore = java + pyth + web
+        //2-2. 평균점수는 소수점 두자리까지
+        let avgScore = (totalScore / 3).toFixed(2)
+        //2-3. 콘솔창에 평균점수 출력
+        console.log(avgScore)
+        //3. 평균점수가 90이 넘으면 A등금,80 B,70 C, 그외 F
+        let grade = '';
+        if (avgScore >= 90) {
+            grade = 'A'
+        } else if (avgScore >= 80) {
+            grade = 'B'
+        } else if (avgScore >= 70) {
+            grade = 'C'
+        } else {
+            grade = 'F'
+        }
+        //4. 결과값 출력
+        // 예) 평균은 몇점이고 등급은 A입니다...
+        document.write("평균은", avgScore, "점 이고 등급은", grade, "입니다")
+    </script>
+</body>
+
+</html>
