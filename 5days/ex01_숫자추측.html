@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>숫자 추측 게임</h1>   
+    <p>  1부터 100까지의 숫자 중에서 하나의 숫자를 뽑았습니다.<br /> 
+        당신이 추측할 수 있는 기회는 10번 입니다.<br />  
+        추측한 숫자가 높다거나 낮다는 아래에서 표시됩니다.<br />  
+    </p>   
+        <form action="">  
+            <input type="text" id="answer" />  
+            <input type="button" value="추측" onclick="compareNumber()"/>  
+        </form>   
+        <p id="before_result">이전 결과:</p> 
+         <p id="result"></p>
+         <script>
+            //1~10까지 랜덤수 생성(Math.random())
+            //console.log(rn)
+            //사용자가 입력한 값을 변수에 저장 => 랜덤수와 비교
+            //let btn=document.getElementsByTagName('input')[1] 이렇게 써도 됨
+            //램덤수와 비교하여 큰수, 작은수, 동일에따라서 출력
+            //1. 큰수룰 입력하면"적은수를 입력해주세요"
+            //2. 적은수를 입력하면"큰수를 입력해주세요"
+            //3. 동일하면 "정답입니다"
+            //4. 내용 출력할 때 span태그를 써서 내용을 만들어 출력
+            //5. 기회는 10번 
+            //6. 10번 기회가 끝나면 추측버튼을 비활성화
+            //7. 사용자가 입력한 오답을 웹페이지에 출력
+            let rn=parseInt(Math.random()*20+1)
+            let answer=document.getElementById('answer')
+            let btn=document.querySelector('input[type=button]')
+            let before_result=document.getElementById('before_result')
+            let result=document.getElementById('result')
+            let count=0;
+            function compareNumber(){
+                let num=parseInt(answer.value)  
+                 //input은 단일태그라서 값 가지고 올때.value
+                if (num==rn){
+                    result.innerHTML='<span>정답입니다😊</span>'
+                    btn.disabled=true
+                }else if(num>rn){
+                    result.innerHTML='<span>작은수를 입력하세요👇</span>'
+                    before_result.innerHTML+=num
+                }
+                else{
+                    result.innerHTML='<span>큰수를 입력하세요👆</span>'
+                    before_result.innerHTML+=num
+                }
+                count+=1
+                if(count==10){
+                    btn.disabled=true
+                    result.innerHTML='<span>도전실패😒</span>'
+
+                }
+            }
+            
+         </script>
+</body>
+</html>

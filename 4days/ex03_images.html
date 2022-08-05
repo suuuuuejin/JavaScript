@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+    img{  
+        width: auto;  
+        height: 300px;  
+    }  
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg",
+    width="300px",
+    id="img1"
+    /><br>
+    <button onclick="ch()">이미지변경</button>
+    <script>
+        //1. ch함수작업
+        function ch(){
+            //img1요소를 객체로 선택
+            let img=document.getElementById("img1");
+            //2. 이미지가 남자곰돌이면 여자곰돌이로 바꾸고
+            //여자곰돌이면 남자곰돌이로 바꿈
+            if(img.src=="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg"){
+                img.src="https://blog.kakaocdn.net/dn/bezjux/btqCX8fuOPX/6uq138en4osoKRq9rtbEG0/img.jpg"
+            }else{
+                img.src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg"
+            }
+        
+        }
+    </script>
+</body>
+</html>

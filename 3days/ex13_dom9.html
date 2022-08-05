@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+    </ul>
+    <script>
+        //id는 고유값이여서 요소 하나만 가져오지만
+        //tagname은 여러개 존재해서 요소가 복수개로 넘어온다.
+        //HTMLCollection객체로 받아옴
+        //배열과 모양이 비슷하여 유사배열이라 부름. 사용법 같다.
+        let lis=document.getElementsByTagName("li");
+        //콘솔창에 li목록을 출력
+        for (let i=0;i<lis.length;i++){
+            console.log(lis[i].innerHTML)
+        }
+    </script>
+</body>
+</html>

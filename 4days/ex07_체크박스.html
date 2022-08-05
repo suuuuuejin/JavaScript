@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        김밥<input type="checkbox" name="food" value="김밥">
+        라면<input type="checkbox" name="food" value="라면">
+        어묵<input type="checkbox" name="food" value="어묵">
+    </form>
+    <script>
+        let foodlist=document.getElementsByName('food')
+        //1. 체크박스의 값을 콘솔창에 출력 .value 로 가져오기
+        for (let i=0;i<foodlist.length;i++){
+            console.log(foodlist[i].value)
+
+        }
+    </script>
+</body>
+</html>

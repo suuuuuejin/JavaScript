@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">오늘 날씨가 좋네요!</h1>
+
+    <script>
+        //1. h1.요소의 객체에 접근
+        //2. h1내용 콘솔창에 출력
+        const h1_obj=document.getElementById("title");
+        //innerHTML:값을 접근할때
+        console.log(h1_obj.innerHTML);
+        //값을 변경할때는 대입연산자를 이용 데이터 초기화
+        h1_obj.innerHTML="이따 비옴"
+        h1_obj.innerHTML="이따<br> 비옴"
+        //단일태그 (input, image)는 .innerHTML를 사용하지 못함 (.value 사용)
+        //시작태그와 끝태그구조를 가진 요소에서 활용가능
+        console.log(h1_obj)
+    </script>
+</body>
+</html>

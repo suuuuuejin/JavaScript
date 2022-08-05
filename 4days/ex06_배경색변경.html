@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--방문시간에 따라 변화하는 배경색 바꾸기-->
+    <h3>방문시간초시간이 짝수이면'violet', 홀수이면 'skyblue'</h3>
+    <hr>
+    <script>
+        let current=new Date();
+        document.write(current.getHours(),"시")
+        document.write(current.getMinutes(),"분")
+        document.write(current.getSeconds(),"초<br>")
+        //1. 초시간이 짝수이면 배경색'violet', 홀수이면 'skyblue'
+        if(current.getSeconds()%2==0){
+            document.body.style.backgroundColor='violet'
+        }else{
+            document.bgColor='skyblue'
+            //document.body.style.backgroundColor='skyblue'
+        }
+    </script>
+</body>
+</html>

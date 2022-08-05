@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--스크립트 인라인방식 사용-->
+    <!--p#text-->
+    <p id="text">Hello JS!!</p>
+    <button onclick="innerFunc()">클릭</button> <!--클릭해야 함수 실행-->
+    <div id="text"></div>
+    <script>
+        function innerFunc(){
+            //1. id가 text인 요소에 접근해서 내용을 알림창에출력
+            //요소=태그+컨텐츠, 요소가 출력
+            const str=document.getElementById("text")
+            alert(str.innerHTML)
+            //2. 값을 "수정할거야"로 값 수정하기
+            str.innerHTML="수정할거야";
+            str.innerHTML="<h1>수정할꺼야</h1>"
+            //innerText는 글자로 처리
+            str.innerText="<h1>수정할꺼야</h1>"
+        }
+    </script>
+</body>
+</html>

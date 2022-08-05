@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>클릭실습</h1>
+    <button onclick="mkH1()">h1태그생성</button>
+    <button onclick="mkA()">a태그 생성</button>
+    <button onclick="mkUl()">ul태그생성</button>
+    <!--div는 생성한 태그를 누적할 공간-->
+    <div id="div1"></div>
+    <script>
+        //1. 태그를 생성할 위치인 div가지고오기
+        let div=document.getElementById("div1")
+        //2. div요소안에 h1태그적용시켜 "DOM활용하기" 출력
+        function mkH1(){
+            div.innerHTML+="<h1>DOM활용하기</h1>" //누적할때는 +로 연결
+        } 
+        //3. a채그 생성(속성값 구글사이트)
+        function mkA(){
+            div.innerHTML+="<a href=http://www.google.com>Google로 이동</a>"
+        } 
+        //4. html,css,js목록을 출력
+        function mkUl(){
+            div.innerHTML+="<ul><li>HTML</li><li>CSS</li><li>JS</li>"
+        } 
+    </script>
+</body>
+</html>

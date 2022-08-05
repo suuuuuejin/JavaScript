@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //js객체:솟성 메소드
+        //구조:{속성1:값1,속성2:값2...}
+        //속성: 문자열로 정의 
+        //값: numberm stringm boolean,object, function
+        let person = {
+            "name":"배수진",
+            "gender":"여성",
+            "age":"20",
+            "greet":function(){
+                console.log("안녕하세요!!")
+            }
+        }
+        //객체내 속성 접근 : 객체명.속성
+        //객체내 메소드 접근 : 객체명.메소드명()
+        console.log(person.name);
+        console.log(person.greet());
+    </script>
+</body>
+</html>

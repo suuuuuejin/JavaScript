@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person={}
+            person.name="배수진"
+            person.age='20'
+            person.gender="여자"
+            person.address="광주"
+            person.favMovies=["토이스토리","로맨틱 홀리데이","극한직업"]
+            person.favFood=["아구찜","마라탕"]
+            person.greeting = function(){
+                document.write(this.name+"의 나이는 "+this.age+"이고 성별은 "+this.gender+"입니다.<br>")
+                document.write("사는곳은 "+this.address+"이고 좋아하는 영화는 "+this.favMovies+" 등이 있습니다.<br>")
+                document.write("좋아하는 음식은 "+this.favFood+"입니다. ")
+
+            }
+            person.greeting()
+    </script>
+</body>
+</html>

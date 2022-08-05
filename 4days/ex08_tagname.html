@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>물을 끓인다</li>
+        <li>스프넣고 라면넣기</li>
+        <li>파송송 넣기</li>
+        <li>5분후 맛있게 먹기</li>
+    </ol>
+    <script>
+        //1. getElementByTagName()사용하기
+        let lis=document.getElementsByTagName("li")
+        //1.리스트 모든 내용을 글자색을 그린으로 변경하기
+        for(let i=0;i<lis.length;i++){
+            lis[i].style.color='green'
+        }
+    </script>
+</body>
+</html>
