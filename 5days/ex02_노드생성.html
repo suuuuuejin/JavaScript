@@ -15,7 +15,11 @@
         //1. 요소생성 createElement()메소드
         let li =document.createElement('li')
         let txt=document.createTextNode('banana')
-        
+        li.appendChild(txt)
+        list.appendChild(li)
+        // 요소 삭제
+        let first_li=document.querySelector('ul li')
+        list.removeChild(frist_li)
     </script>
 </body>
 </html>
