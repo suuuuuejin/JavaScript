@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+</head>
+<body>
+    <input type="text" name="txtName1" class="txt1" value="텍스트1"><br>
+    <input type="text" class="txt2" value="텍스트2">
+    <script>
+         $(function(){
+            //1. $(".클래스명")선택하고 val()값 가져오기
+            let txt1=$('.txt1').val()
+            let txt2=$('.txt2').val()
+            //2. 콘솔창에 출력
+            console.log(txt1);
+            console.log(txt2);
+            //3. input요소의 이름이 txtName1의 값을 콘솔창에 출력
+            let txt3=$('input[name="txtName1"]').val()
+            console.log(txt3);
+         })
+    </script>
+</body>
+</html>

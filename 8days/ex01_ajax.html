@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.js"></script>
+</head>
+<body>
+    <button>영화정보보기</button>
+    <script>
+    $(function(){
+        $('button').click(()=>{
+            $.ajax({
+                url:"http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20220801",
+                success:(movieinfo)=>{ //매개변수 movieinfo
+                    console.log("요청성공",movieinfo);
+                    console.log((movieinfo.boxOfficeResult));
+                    console.log(movieinfo.boxOfficeResult.dailyBoxOfficeList);
+                    let movielist=movieinfo.boxOfficeResult.dailyBoxOfficeList;
+                    /* for(let i=0;i<movielist.length;i++){
+                        console.log(movielist[i].rank,movielist[i].movieNm,movielist[i].openDt);
+                    } */
+                    //foreach(요소의데이터,인텍스)
+                    movielist.forEach((item,index)=>{
+                        console.log(item.rank,item.movieNm,item.openDt);
+                    })
+                }
+                
+            })
+        })
+    })
+        
+        
+        </script>
+</body>
+</html>

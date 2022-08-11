@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.js"></script>
+</head>
+<body>
+    <button >영화정보보기</button>
+    <div id="pp"></div>
+    <script>
+    $(function(){
+        $('button').click(()=>{
+            $.ajax({
+                url:"http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20220801",
+                success:(res)=>{ 
+                let str= `<table>`
+                    str+=`<tr>`
+                    str+=`<th>순위</th>`
+                    str+=`<th>영화제목</th>`
+                    str+=`<th>개봉일자</th>`
+                    str+=`</tr>`
+                    let lis=res.boxOfficeResult.dailyBoxOfficeList;
+                    document.write(str)                
+                    lis.forEach((item)=>{
+                        //tr td태그랑 같이 서서 값 출력
+                        document.write(`<tr>`)
+                        document.write(`<td>${item.rank}</td>`)
+                        document.write(`<td>${item.movieNm}</td>`)
+                        document.write(`<td>${item.openDt}</td>`)
+                        document.write(`</tr>`)
+                    })
+                    str+=`</table>`
+                    $('#pp').prepend(str)    
+                },
+                error:function(){
+                    alert("요청실패!!");
+                }
+            })
+        })
+    })
+        
+        
+        </script>
+</body>
+</html>

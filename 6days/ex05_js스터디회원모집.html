@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1 id="title">스터디회원모집</h1>
+    <p id="trigger">자세한 내용을 보려면 클릭!!</p>
+    <div id="detail"></div>
+    <script>
+         $(function(){
+            /*  $('#trigger').click(function(){
+                 //1. div영역에 "스터디 주제:자바스크립트, 대상:인공지능사관학교학생"출력
+                 $("div").html("<p>스터디 주제:자바스크립트<br> 대상:인공지능사관학교학생</p>")
+                 $('h1').text('자바스크립트 회원모집')
+                }) */
+                $('#trigger').on('click',function(){
+                    $("div").html("<p>스터디 주제:자바스크립트<br> 대상:인공지능사관학교학생</p>")
+                 $('h1').text('자바스크립트 회원모집')
+                })
+                $txt=$('h1').text()
+                console.log($txt)
+         })
+    </script>
+</body>
+</html>

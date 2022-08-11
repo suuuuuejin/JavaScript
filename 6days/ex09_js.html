@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <style>
+        .box-style-1{
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        cursor: default;
+        }
+        .box-style-2{
+        background-color: black;
+        width: 300px;
+        height: 400px;
+        cursor: default;
+        } </style>
+</head>
+<body>
+    <div id="box" class="box-style-1"></div>
+    <script>
+         $(function(){
+            $('#box').click(()=>{
+                //.addClass('클래스값') 지정한 클래스 값 생성
+                //$('#box').addClass('box-style-2')
+
+                //.toggleClass("클래스값"):기존값이 있으면 삭제하고 생성, 없으면 새로생성
+                //$('#box').toggleClass('box-style-2')
+
+                //.removeClass("클래스값") 지정한 클래스값
+                $('#box').removeClass("box-style-1")
+            })
+         })
+    </script>
+</body>
+</html>

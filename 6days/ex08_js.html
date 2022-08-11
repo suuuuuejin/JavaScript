@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+</head>
+<body>
+    <p class="h"></p>
+    <button id="btnp">p태그 다루기</button>
+    <div id="div1">
+        아이디:<input type="text" name="id">
+        패스워드:<input type="text" name="pw">
+    </div>
+    <button id="btnDiv">div태그 다루기</button>
+    <button id="btnh">h태그 다루기</button>
+    <button id="addAttr">id input 속성 추가</button>
+    <button id="getId_Pw">input태그 다루기</button>
+    <button id="removeAttr">속성지우기</button>
+    <button id="removeP">p태그 지우기</button>
+    <script>
+         $(function(){
+            //1. 'p태그다루기'버튼 클릭시 p태그안에 내용을
+            //    h3태그를 사용하여 'p태그클릭!!'로 변경 html()메소드사용
+            $('#btnp').click(()=>{
+                $('.h').html('<h3>p태그클릭!!</h3>')
+            })
+            //2. 'div태그다루기'버튼 클릭시 id가 div인 태그배경을 'pink'로 변경
+            $('#btnDiv').click(()=>{
+                $('#div1').css('background-color','pink');
+            })
+            //3. 'h태그다루기' 버튼 클릭시 '글자바꾸기'변경 : text()
+            $('#btnh').click(()=>{
+                $('#btnh').text('글자바꾸기')
+            })
+            //4. 'id input 속성 추가'버튼 클릭시 input창 placeholder값을 'id작성'으로 변경
+            // .attr('속성','변경할 속성값')
+            $('#addAttr').click(()=>{
+                $('input[name="id"]').attr('placeholder','id작성')
+            })
+            //5. 'input태그 다루기'라는 버튼 클릭시,
+            //    사용자가 입력한 ID,PW값을 alert창으로 띄우기, val()사용 
+            $('#getId_Pw').click(()=>{
+                let id=$('input[name=id]').val()
+                let pw=$('input[name=pw]').val()
+                alert('아이디:'+id+'이고 비번은'+pw+'입니다')
+            })
+            //6. 4번에서 추가한 속성 삭제 .removeAttr('속성명')
+            $('removeAttr').click(()=>{
+                $('input[name="id"]').removeAttr('placeholder')
+            })
+            //7. removep 버튼을 클릭시 p태그 삭제
+            //$('요소이름').remove()
+            $('#removeP').click(()=>{
+                $('p').remove()
+            })
+         })
+    </script>
+</body>
+</html>

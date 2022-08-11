@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    </head>
+<body>
+    <div class="class2">
+        <h2>값입니다1</h2>
+        </div>
+        <div class="class2">
+        <h2>값입니다2</h2>
+        </div>
+        <input type="text" value="텍스트1">
+        <input type="text" value="텍스트2">
+    <script>
+        $(function(){
+            //1. 클래스명이 class2인 두번째 속하는 값을 가져오기
+           let cl2=$(".class2:eq(1)").html()
+            console.log(cl2)
+            //2. input요소의 text타입의 첫번째 값을 콘솔에 출력
+            let inp=$('input[type=text]:eq(0)').val()
+            console.log(inp)
+        })
+    </script>
+</body>
+</html>

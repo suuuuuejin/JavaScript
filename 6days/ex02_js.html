@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1 id="title">제이쿼리 연습</h1>
+    
+    <script>
+         $(function(){
+            //1. h1태그에 여러개의 스타일을 변경할 때
+            /* $('h1').css("color","blue");
+            $('h1').css("background-color","orange");
+            $('h1').css("font-family","굴림"); */
+
+            //2. .css()메소드 연속 사용해서 스타일 변경
+            /* $('h1').css("color","blue")
+                   .css("background-color","orange")
+                   .css("font-family","굴림"); */
+
+            //3. 딕셔너리 구조({속성:값,속성2:값2,...})
+            $('h1').css({
+                "color":"red",
+                'font-size':'30px',
+                'background':'orange'
+            })
+         })
+         
+    </script>
+</body>
+</html>

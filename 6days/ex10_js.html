@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <style>
+        .txt{
+        background-color: grey;
+        font-size: 1.5em;
+        color:white;
+        font-weight: bold;
+        cursor: pointer; /*마우스커서모양*/
+        } </style>
+</head>
+<body>
+    <button id="createBtn"> 내용추가 </button>
+    <button id="designBtn"> 디자인적용 </button>
+    <button id="removeBtn1"> 디자인삭제 </button>
+    <button id="removeBtn2"> 내용삭제 </button>
+    <div id="contents"></div>
+    <script>
+         $(function(){
+            //1. 내용추가 버튼 클릭시 '내용추가'를 웹페이지에 출력
+            //append(): 선택한 요소의 마지막위치에 요소추가
+            $('#createBtn').click(()=>{
+                $('#contents').append('<p>내용추가</p>')
+            })
+            //2. 디자인적용버튼 클릭시 p요소의 class 속성 txt 추가
+            $('#designBtn').click(()=>{
+                //addClass()사용:f12눌러 속성값 추가확인
+                $('p').addClass('txt')
+            })
+            //3. 디자인삭제 버튼 클릭시 디자인삭제(class값 삭제)
+            //removeClass('클래스 속성값')
+            $('#removeBtn1').click(()=>{
+                $('p').removeClass('txt')
+            })
+            //4. 내용삭제버튼 클릭 div요소내 생성된 모든 p요소 삭제
+            //요소선택.empty()
+            $('#removeBtn2').click(()=>{
+                $('#contents').empty()
+            })
+         })
+    </script>
+</body>
+</html>

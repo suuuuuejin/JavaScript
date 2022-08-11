@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    </head>
+<body>
+    <div id="div1" style="display:block;"> 테스트1 </div>
+    <div id="div2" class="testDiv"> 테스트2 </div>
+    <script>
+        $(function(){
+        //1. 알림창에 style 속성값을 출력
+        //.attr("속성명"): 값 가져오기get
+        //alert($('#div1').attr("style"))
+        //3. style속성의 color를 red로 변경
+        $("#div1").attr("style","color:red")  //set
+        //2. class속성값을 알림창에 출력
+        alert($('#div2').attr("clsas"))
+        })
+    </script>
+</body>
+</html>
