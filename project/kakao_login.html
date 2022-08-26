@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="javascript:kakaoLogin();"><img src="https://www.gb.go.kr/Main/Images/ko/member/certi_kakao_login.png" alt="카카오계정 로그인" style="height: 40px;width:auto"/></a>
+    
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        //281c02fa614e4ca369f032f5a1b0b714
+        window.Kakao.init('281c02fa614e4ca369f032f5a1b0b714');
+
+        function kakaoLogin() {
+            window.Kakao.Auth.login({
+                scope: 'profile_nickname, account_email', //동의항목 페이지에 있는 개인정보 보호에서 활성화한 ID값
+                success: function(authObj) {// 로그인 성공하면 받아오는 데이터
+                    console.log(authObj) //콘솔창에서 확인
+                    window.Kakao.API.request({ // 사용자 정보 가져오기 
+                        url: '/v2/user/me', //로그인한 사용자의 정보
+                        success: (res) => {
+                            const kakao_account = res.kakao_account;  //account 받아옴
+                            console.log(kakao_account)
+                        }
+                    });
+                    // window.location.href='/ex/kakao_login.html' //리다이렉트 되는 코드
+                },
+                // fail: function(error) {
+                //     console.log(error);
+                // }
+            });
+        }
+    </script>
+
+</body>
+</html>
